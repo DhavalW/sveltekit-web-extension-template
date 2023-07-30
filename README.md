@@ -1,38 +1,18 @@
-# create-svelte
+# SvelteKit-Webextension-Template
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A starter template to build Svelte powered browser extensions, with a pre-configured SvelteKit build system that lets you get started instantly. Based on the steps in [this article](https://javascript.plainenglish.io/making-a-chrome-extension-with-svelte-2fefb3769c).
 
-## Creating a project
+## Setup
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
+1. Use this repo as a template and create a new one for your own project.
+2. clone a local copy of your created repo
+3. Run
+``` 
+npm install
 npm run build
 ```
+4. Load the /build folder as an unpacked extension in chrome from the chrome extension settings page. (You may have to enable chrome developer mode, if you haven't already)
+5. The extension should auto update usually. But as a general practise, refresh the extension from Chrome's extensions setings page, each time you run ``` npm build ```
+6. Publish to chrome web store once ready, as per the steps in their dev docs.
+   
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
